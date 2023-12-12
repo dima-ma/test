@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Exchanger.Infrastructure</RootNamespace>
+        <AssemblyName>Exchanger.Infrastructure</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Data\SQLite\**" />
+        <EmbeddedResource Remove="Data\SQLite\**" />
+        <None Remove="Data\SQLite\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CsvHelper" Version="30.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="7.0.7" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.7" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.7" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.7" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.7" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Exchanger.Application\Exchanger.Application.csproj" />
+      <ProjectReference Include="..\Exchanger.Domain\Exchanger.Domain.csproj" />
+    </ItemGroup>
+    
+</Project>

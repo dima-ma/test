@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "8b8a10ab-2b64-4e66-aefd-60eb5e364b5a",
+		"name": "Exchanger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20643256"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Exchange",
+					"item": [
+						{
+							"name": "convert",
+							"item": [
+								{
+									"name": "Convert",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Exchange/convert?amount=<double>&currency=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Exchange",
+												"convert"
+											],
+											"query": [
+												{
+													"key": "amount",
+													"value": "<double>"
+												},
+												{
+													"key": "currency",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Exchange/convert?amount=<double>&currency=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Exchange",
+														"convert"
+													],
+													"query": [
+														{
+															"key": "amount",
+															"value": "<double>"
+														},
+														{
+															"key": "currency",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"amount\": \"<double>\"\n}"
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Exchange/convert?amount=<double>&currency=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Exchange",
+														"convert"
+													],
+													"query": [
+														{
+															"key": "amount",
+															"value": "<double>"
+														},
+														{
+															"key": "currency",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\",\n  \"voluptate8ee\": {}\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "history",
+							"item": [
+								{
+									"name": "History",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Exchange/history?page=<integer>&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Exchange",
+												"history"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Exchange/history?page=<integer>&pageSize=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Exchange",
+														"history"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "<integer>"
+														},
+														{
+															"key": "pageSize",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"exchanges\": {\n    \"items\": [\n      {\n        \"currency\": \"<string>\",\n        \"result\": \"<string>\"\n      },\n      {\n        \"currency\": \"<string>\",\n        \"result\": \"<string>\"\n      }\n    ],\n    \"pageNumber\": \"<integer>\",\n    \"totalPages\": \"<integer>\",\n    \"totalCount\": \"<integer>\",\n    \"hasPreviousPage\": \"<boolean>\",\n    \"hasNextPage\": \"<boolean>\"\n  }\n}"
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Exchange/history?page=<integer>&pageSize=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Exchange",
+														"history"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "<integer>"
+														},
+														{
+															"key": "pageSize",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\",\n  \"voluptate8ee\": {}\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
